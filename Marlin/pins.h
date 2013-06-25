@@ -1113,8 +1113,8 @@
 #define Z_MAX_PIN 18
 #define Z_ENABLE_PIN 35
 
-#define HEATER_BED_PIN -1
-#define TEMP_BED_PIN -1
+#define HEATER_BED_PIN 3
+#define TEMP_BED_PIN 9
 
 #define HEATER_0_PIN  2
 #define TEMP_0_PIN 8
@@ -1136,7 +1136,7 @@
 #define SDPOWER            -1
 #define SDSS               -1
 #define LED_PIN            -1
-#define FAN_PIN            -1
+#define FAN_PIN            4
 #define PS_ON_PIN          -1
 #define KILL_PIN           -1
 #define SUICIDE_PIN        -1  //PIN that has to be turned on right after start, to keep power flowing.
