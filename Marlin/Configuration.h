@@ -185,8 +185,8 @@
 // PID settings:
 // Comment the following line to disable PID and enable bang-bang.
 #define PIDTEMP
-#define BANG_MAX 255 // limits current to nozzle while in bang-bang mode; 255=full current
-#define PID_MAX 255 // limits current to nozzle while PID is active (see PID_FUNCTIONAL_RANGE below); 255=full current
+#define BANG_MAX 75 // limits current to nozzle while in bang-bang mode; 255=full current
+#define PID_MAX 100 // limits current to nozzle while PID is active (see PID_FUNCTIONAL_RANGE below); 255=full current
 #ifdef PIDTEMP
   //#define PID_DEBUG // Sends debug data to the serial port.
   //#define PID_OPENLOOP 1 // Puts PID in open loop. M104/M140 sets the output power from 0 to PID_MAX
@@ -200,17 +200,11 @@
 
 // If you are using a preconfigured hotend then you can use one of the value sets by uncommenting it
 
-// More Trial and error: (Barely any overshoot now, close enough!)
-   #define DEFAULT_Kp 0.75
-   #define DEFAULT_Ki 20
-   #define DEFAULT_Kd 600
+// Via Autotune -- Still overshoots on startup, but tracks much better now:
+   #define DEFAULT_Kp 6.98
+   #define DEFAULT_Ki 0.1
+   #define DEFAULT_Kd 49.06
 
-// Trial and error.
-/*
-   #define DEFAULT_Kp 0.25
-   #define DEFAULT_Ki 0.25
-   #define DEFAULT_Kd 450.0
-*/
 // Ultimaker
 //    #define  DEFAULT_Kp 22.2
 //    #define  DEFAULT_Ki 1.08f
